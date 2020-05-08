@@ -83,17 +83,22 @@ fun BasicComponents() {
                 }, secondaryText = {
                     Text(text = "Subtitle")
                 }, icon = {
-                    Box(modifier = Modifier.preferredWidth(48.dp) + Modifier.preferredHeight(48.dp)+Modifier.drawBackground(
-                        color = Color.Green
-                    )) {
+                    Box(
+                        modifier = Modifier.preferredWidth(48.dp) + Modifier.preferredHeight(48.dp) + Modifier.drawBackground(
+                            color = Color.Green
+                        )
+                    ) {
                         //Image(asset = imageFromResource(resources, R.drawable.bg_home_gradient))
                     }
                 })
             }
 
             Title(title = "Circular Progress")
-            CircularProgressIndicator(progress = 0.5f, modifier = Modifier.wrapContentWidth(
-                Alignment.CenterHorizontally))
+            CircularProgressIndicator(
+                progress = 0.5f, modifier = Modifier.wrapContentWidth(
+                    Alignment.CenterHorizontally
+                )
+            )
         }
     }
 }
