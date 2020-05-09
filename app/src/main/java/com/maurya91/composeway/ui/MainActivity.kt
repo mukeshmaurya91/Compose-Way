@@ -46,19 +46,21 @@ fun BasicComponents() {
         Column(modifier = Modifier.fillMaxSize() + Modifier.padding(16.dp)) {
             Title(title = "Simple Text")
             Text(text = "Hello Jetpack Compose")
+            Divider(color = Color.Gray)
 
             Title(title = "Styled Text")
             Text(text = "Hello Jetpack Compose", style = TextStyle(background = Color.Green))
+            Divider(color = Color.Gray)
 
             Title(title = "Button")
             Button(onClick = {}) {
                 Text(text = "Simple Button")
             }
+            Divider(color = Color.Gray)
 
             Title(title = "Edit Text")
-            TextField(value = TextFieldValue("jlksdkl"), onValueChange = {})
-
-
+            TextField(value = TextFieldValue("input"), onValueChange = {})
+            Divider(color = Color.Gray)
 
             Title(title = "Image")
 //            val image = imageResource(R.drawable.bg_home_gradient)
@@ -70,6 +72,7 @@ fun BasicComponents() {
             ) {
                 //                Image(asset = imageResource(id = R.drawable.bg_home_gradient))
             }
+            Divider(color = Color.Gray)
 //            Title(title = "Icon")
 //            val icon = imageResource(R.drawable.ic_baseline_arrow_back_24)
 //            Icon(asset = icon,
@@ -92,6 +95,7 @@ fun BasicComponents() {
                     }
                 })
             }
+            Divider(color = Color.Gray)
 
             Title(title = "Circular Progress")
             CircularProgressIndicator(
@@ -99,6 +103,18 @@ fun BasicComponents() {
                     Alignment.CenterHorizontally
                 )
             )
+            Divider(color = Color.Gray)
+
+            Title(title = "Checkbox")
+            Checkbox(
+                checked = true,
+                onCheckedChange = {}
+            )
+            Divider(color = Color.Gray)
+
+            Title(title = "TriState checkbox")
+            TriStateCheckboxComponent(TriStateFormState())
+            Divider(color = Color.Gray)
         }
     }
 }
